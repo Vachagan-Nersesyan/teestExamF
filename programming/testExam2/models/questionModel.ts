@@ -24,7 +24,11 @@ const addQuestionSchema = new Schema({
         required: true
     },
 
+    questionDescText: {
+        type: String,
+        required: false
 
+    },
     secTypeQsAnswers: {
         type: Object,
         required: false
