@@ -4,6 +4,7 @@ import path from "path"
 
 import mongoose from "mongoose"
 
+import subjectRouter from './routes/subject-routes'
 import questionRouter from './routes/question-routes'
 
 const app = express()
@@ -25,6 +26,7 @@ app.use(express.static('./frontend/build'))
 
 
 
+app.use(subjectRouter)
 app.use(questionRouter)
 
 app.get('*', (req, res) => {

@@ -3,49 +3,24 @@ import mongoose from "mongoose"
 const Schema = mongoose.Schema
 
 const addQuestionSchema = new Schema({
-    chckbxIndex: {
-        type: Number,
+    info: {
+        type: Array,
         required: false
     },
-    answersInputs: {
-        type: Object,
-        required: false
-    },
-    questionPoint: {
-        type: String,
-        required: true
-    },
-    questionText: {
-        type: String,
-        required: true
-    },
-    selectedRpValue: {
-        type: String,
-        required: true
-    },
-
-    questionDescText: {
+    name: {
         type: String,
         required: false
-
     },
-    secTypeQsAnswers: {
-        type: Object,
-        required: false
-    },
-
-
-    thirdTypeQsAnswers: {
-        type: Object,
+    subjjectName: {
+        type: String,
         required: false
     }
-
 
 })
 
 
 
-const AddQuestionItem = mongoose.model('tests', addQuestionSchema)
+const AddQuestionItem = mongoose.model('allexams', addQuestionSchema)
 
 
 export default AddQuestionItem
